@@ -14,7 +14,7 @@ This is a GUI assignment. Please set up a GitHub repo like previous assignments.
  - The user can upload an image query. Again, return the top 5 relevant images along with similarity scores.
  - The user can upload both an image and text query. In this case, the user can enter a value between 0.0 and 1.0 indicating how much to weigh the text query relative to the image query. Again, return the top 5 relevant images along with similarity scores.
 
-The video in this repo should clarify the requirements.
+[This video](https://youtu.be/U2Ga0ydCfNA) should clarify the requirements.
 
 **Please complete the Python notebook as a first step. You don't need to hand this in, but it walks you through implementation steps.**
 
