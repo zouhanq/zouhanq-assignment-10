@@ -3,7 +3,7 @@
 
 **Goal:** Implement a simplified version of Google Image Search.
 
-This is a GUI assignment. Please setup a Github repo like previous assignments. There is no GUI template, but we encourage you to reuse code from previous experiments.
+This is a GUI assignment. Please setup a Github repo like previous assignments. There is no GUI template, but we encourage you to reuse code from earlier homeworks.
 
 **Deliverables:**
  - A github repo containing all the code necessary to reproduce your results, including a `Makefile`.
