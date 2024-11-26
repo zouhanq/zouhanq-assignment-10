@@ -14,8 +14,12 @@ This is a GUI assignment. Please setup a Github repo like previous assignments. 
  - The user can upload an image query. Again, return the top-5 relevant images along with similarity scores.
  - The user can upload both an image and text query. In this case, the user can enter a value between 0.0 and 1.0 indicating how much to weigh the text query relative to the image query. Again, return the top-5 relevant images along with similarity scores.
 
-The video in this repo should calrify the requirements.
+The video in this repo should clarify the requirements.
 
-**Please commplete the Python notebook as a first step. You don't need to hand this in, but it walks you through implementation steps.**
+**Please complete the Python notebook as a first step. You don't need to hand this in, but it walks you through implementation steps.**
 
 **Please download these files:**
+- [`coco_images_resized.zip`](https://drive.google.com/file/d/1eNQIUlIKqOg-3e205YIMyUnfTTaOIspP/view?usp=sharing): The image files.
+- [`image_embeddings.pickle`](https://drive.google.com/file/d/1M0LodmtqPW-WfEUT50iAx9kAqBUo4CWm/view?usp=sharing): The image embeddings.
+- [`house.jpg`](https://drive.google.com/file/d/1uXzWnWgGIqwgEGWbWYY2xUtYXVVRvhBd/view?usp=sharing): An example image.
+
