@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>Image Search</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+  <h1>Image Search</h1>
+  <form method="POST" enctype="multipart/form-data" class="search-form">
+      <div class="form-group">
+        <label>Image query:
+          <input type="file" name="image_query" accept="image/*">
+        </label>
+        {% if image_file %}
+          <span>{{ image_file }}</span>
+        {% endif %}
+      </div>
+      
+      <div class="form-group">
+        <label>Text query:
+          <input type="text" name="text_query" value="{{ text_query if text_query else '' }}">
+        </label>
+      </div>
+      
+      <div class="form-group">
+        <label>Hybrid Query Weight (λ):
+          <input type="number" step="0.1" min="0" max="1" name="lambda" value="{{ lambda_val if lambda_val else '0.5' }}">
+        </label>
+      </div>
+      
+      <div class="form-group">
+        <label>Select query type:
+          <select name="query_type">
+              <option value="text" {% if query_type == 'text' %}selected{% endif %}>Text query</option>
+              <option value="image" {% if query_type == 'image' %}selected{% endif %}>Image query</option>
+              <option value="hybrid" {% if query_type == 'hybrid' %}selected{% endif %}>Hybrid query</option>
+          </select>
+        </label>
+      </div>
+      
+      <div class="form-group">
+        <label>
+          <input type="checkbox" name="use_pca" {{ use_pca_checked }}> Use PCA-reduced embeddings
+        </label>
+      </div>
+      
+      <div class="form-group">
+        <input type="submit" value="Search" class="btn">
+      </div>
+  </form>
+
+  {% if error %}
+    <p class="error">{{ error }}</p>
+  {% endif %}
+
+  {% if message %}
+    <p class="message">{{ message }}</p>
+  {% endif %}
+  
+  {% if results %}
+    <h2>Top Search Results</h2>
+    <div class="results-container">
+      {% for fname, score, img_path in results %}
+      <div class="result-item">
+        <img src="{{ url_for('serve_image', filename=fname) }}" alt="Result Image" class="result-image">
+        <p class="similarity">Similarity: {{ "%.3f"|format(score) }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+flask                # Web framework for building the app
+numpy                # Numerical computations
+pandas               # Data handling and processing
+torch                # PyTorch, for running CLIP models
+open-clip-torch      # CLIP model for image and text embeddings
+scikit-learn         # PCA for dimensionality reduction
+pillow               # For image processing (PIL)
